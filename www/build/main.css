@@ -19649,6 +19649,15 @@ page-projects .padding-header {
   padding-bottom: 20px;
 }
 
+page-projects-edit .padding-top {
+  padding-top: 18px;
+}
+
+page-projects-edit .padding-btn {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 page-signup .padding-header {
   padding-top: 20px;
   padding-bottom: 20px;
