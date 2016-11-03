@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- Title -->
+    <ion-title> BuildersRecords </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>  
+  <!-- Page Header -->
+  <div class="padding-header text-center">
+    <h1> Sign Up </h1>
+  </div>
+  <!-- Inputs -->
+  <ion-list>
+    <!-- Email Address -->
+    <ion-item>
+      <ion-label floating> Email Address </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- Username -->
+    <ion-item>
+      <ion-label floating> Username </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- Password -->
+    <ion-item>
+      <ion-label floating> Password </ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <!-- Confirm Password -->
+    <ion-item>
+      <ion-label floating> Confirm Password </ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <!-- Button -->
+  <button ion-button block class="btn btn-success" (click)="signUp()"> Sign Up </button>
+  <!-- Link -->
+  <div class="text-center padding-top">
+    <p class="text-muted"> <b> Already have an account? </b>
+      <a (click)="goToLogin()"> <b> Log in </b> </a>
+    </p>
+  </div>
+</ion-content>

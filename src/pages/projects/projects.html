@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- Title -->
+    <ion-title> BuildersRecords </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>  
+  <!-- Page Header -->
+  <div class="padding-header">
+    <h1> Projects </h1>
+  </div>
+  <!-- Button -->
+  <ion-fab top right>
+    <button ion-fab mini class="btn btn-success"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  <!-- Projects -->
+  <ion-card *ngFor="let project of projects">
+    <!-- Card Header -->
+    <ion-card-header color>
+      <span class="glyphicon glyphicon-home padding-glyphicon" aria-hidden="true"></span>
+      <a class="text-success"> <b> {{ project.name }} </b> </a>
+    </ion-card-header>
+    <!-- Card Content -->
+    <ion-card-content> {{ project.address }} </ion-card-content>    
+    <!-- Card Bottom -->
+    <ion-item>
+      <span item-left (click)="goToProjectsEdit()"> 
+        <span class="glyphicon glyphicon-cog padding-glyphicon" aria-hidden="true"></span> Edit 
+      </span>
+      <span item-right class="text-danger"> 
+        <span class="glyphicon glyphicon-trash padding-glyphicon" aria-hidden="true"></span> Delete 
+      </span>
+    </ion-item>
+  </ion-card>
+</ion-content>
