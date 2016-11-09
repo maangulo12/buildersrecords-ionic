@@ -13033,11 +13033,13 @@ var menuTypes = {};
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__translation_translate__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__translation_translate_pipe__ = __webpack_require__(569);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "f", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "g", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "h", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["e"]; });
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
@@ -23106,7 +23108,7 @@ var LoginPage = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\login\login.html"*/'<ion-header>\n  <ion-toolbar color="primary">\n    <!-- Title -->\n    <ion-title> BuildersRecords </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>  \n  <!-- Page Header -->\n  <div class="page-header text-center">\n    <h1> Log In </h1>\n  </div>\n  <!-- Inputs -->\n  <ion-list>\n    <!-- Username or Email -->\n    <ion-item>\n      <ion-label floating> Username or Email </ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n    <!-- Password -->\n    <ion-item>\n      <ion-label floating> Password </ion-label>\n      <ion-input type="password"></ion-input>\n    </ion-item>\n  </ion-list>\n  <!-- Button -->\n  <button ion-button block class="btn btn-success" (click)="logIn()"> Log In </button>\n  <!-- Link -->\n  <div class="text-center padding-top">\n    <p class="text-muted"> <b> Don\'t have an account? </b>\n      <a (click)="goToSignup()"> <b> Sign up! </b> </a>\n    </p>\n  </div>\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\login\login.html"*/
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* LoadingController */]])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -23134,9 +23136,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ProjectsPage = (function () {
-    function ProjectsPage(navCtrl, modalCtrl) {
+    function ProjectsPage(navCtrl, modalCtrl, actionSheetCtrl) {
         this.navCtrl = navCtrl;
         this.modalCtrl = modalCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
         this.projects = [
             {
                 name: 'Canyon Lake House',
@@ -23148,11 +23151,32 @@ var ProjectsPage = (function () {
         var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__projects_edit_projects_edit__["a" /* ProjectsEditPage */]);
         modal.present();
     };
+    ProjectsPage.prototype.deleteProject = function () {
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Delete Project',
+            buttons: [
+                {
+                    text: 'Delete',
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('Delete clicked');
+                    }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
     ProjectsPage = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
-            selector: 'page-projects',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header">\n\n    <h1> Projects </h1>\n\n  </div>\n\n  <!-- Button -->\n\n  <ion-fab top right>\n\n    <button ion-fab mini class="btn btn-success"><ion-icon name="add"></ion-icon></button>\n\n  </ion-fab>\n\n  <!-- Projects -->\n\n  <ion-card *ngFor="let project of projects">\n\n    <!-- Card Header -->\n\n    <ion-card-header color>\n\n      <span class="glyphicon glyphicon-home padding-glyphicon" aria-hidden="true"></span>\n\n      <a class="text-success"> <b> {{ project.name }} </b> </a>\n\n    </ion-card-header>\n\n    <!-- Card Content -->\n\n    <ion-card-content> {{ project.address }} </ion-card-content>    \n\n    <!-- Card Bottom -->\n\n    <ion-item>\n\n      <span item-left (click)="goToProjectsEdit()"> \n\n        <span class="glyphicon glyphicon-cog padding-glyphicon" aria-hidden="true"></span> Edit \n\n      </span>\n\n      <span item-right class="text-danger"> \n\n        <span class="glyphicon glyphicon-trash padding-glyphicon" aria-hidden="true"></span> Delete \n\n      </span>\n\n    </ion-item>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/
+            selector: 'page-projects',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header">\n\n    <h1> Projects </h1>\n\n  </div>\n\n  <!-- Button -->\n\n  <ion-fab top right>\n\n    <button ion-fab mini class="btn btn-success"><ion-icon name="add"></ion-icon></button>\n\n  </ion-fab>\n\n  <!-- Projects -->\n\n  <ion-card *ngFor="let project of projects">\n\n    <!-- Card Header -->\n\n    <ion-card-header color>\n\n      <span class="glyphicon glyphicon-home padding-glyphicon" aria-hidden="true"></span>\n\n      <a class="text-success"> <b> {{ project.name }} </b> </a>\n\n    </ion-card-header>\n\n    <!-- Card Content -->\n\n    <ion-card-content> {{ project.address }} </ion-card-content>    \n\n    <!-- Card Bottom -->\n\n    <ion-item>\n\n      <span item-left (click)="goToProjectsEdit()"> \n\n        <span class="glyphicon glyphicon-cog padding-glyphicon" aria-hidden="true"></span> Edit \n\n      </span>\n\n      <span item-right class="text-danger" (click)="deleteProject()"> \n\n        <span class="glyphicon glyphicon-trash padding-glyphicon" aria-hidden="true"></span> Delete \n\n      </span>\n\n    </ion-item>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* ModalController */]])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ActionSheetController */]])
     ], ProjectsPage);
     return ProjectsPage;
 }());
@@ -35533,17 +35557,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ProjectsEditPage = (function () {
-    function ProjectsEditPage(navCtrl) {
+    function ProjectsEditPage(navCtrl, viewCtrl) {
         this.navCtrl = navCtrl;
+        this.viewCtrl = viewCtrl;
     }
+    ProjectsEditPage.prototype.dismissModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    ProjectsEditPage.prototype.saveProject = function () {
+    };
     ProjectsEditPage = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
-            selector: 'page-projects-edit',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\projects-edit\projects-edit.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">    \n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n    <!-- Cancel Button -->\n\n    <ion-buttons start>\n\n      <button ion-button class="btn btn-default" (click)="dismiss()">\n\n        <span color="light"> Cancel </span>\n\n      </button>\n\n    </ion-buttons>\n\n    <!-- Save Button -->\n\n    <ion-buttons end>\n\n      <button ion-button class="btn btn-success" (click)="save()">\n\n        <span color="light"> Save </span>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Project Name -->\n\n    <ion-item>\n\n      <ion-label floating> Project Name </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Address -->\n\n    <ion-item>\n\n      <ion-label floating> Address </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- City -->\n\n    <ion-item>\n\n      <ion-label floating> City </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- State -->\n\n    <ion-item>\n\n      <ion-label floating> State </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Zipcode -->\n\n    <ion-item>\n\n      <ion-label floating> Zipcode </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Home Square Feet -->\n\n    <ion-item>\n\n      <ion-label floating> Home Square Feet </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Project Type -->\n\n    <ion-item>\n\n      <ion-label floating> Project Type </ion-label>\n\n      <ion-select [(ngModel)]="project-type">\n\n        <ion-option value="ubuildit"> UBuildIt </ion-option>\n\n        <ion-option value="other"> Other </ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n  <br><br><br>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\projects-edit\projects-edit.html"*/
+            selector: 'page-projects-edit',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\projects-edit\projects-edit.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">    \n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n    <!-- Cancel Button -->\n\n    <ion-buttons start>\n\n      <button ion-button class="btn btn-default" (click)="dismissModal()">\n\n        <span color="light"> Cancel </span>\n\n      </button>\n\n    </ion-buttons>\n\n    <!-- Save Button -->\n\n    <ion-buttons end>\n\n      <button ion-button class="btn btn-success" (click)="saveProject()">\n\n        <span color="light"> Save </span>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Project Name -->\n\n    <ion-item>\n\n      <ion-label floating> Project Name </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Address -->\n\n    <ion-item>\n\n      <ion-label floating> Address </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- City -->\n\n    <ion-item>\n\n      <ion-label floating> City </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- State -->\n\n    <ion-item>\n\n      <ion-label floating> State </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Zipcode -->\n\n    <ion-item>\n\n      <ion-label floating> Zipcode </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Home Square Feet -->\n\n    <ion-item>\n\n      <ion-label floating> Home Square Feet </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Project Type -->\n\n    <ion-item>\n\n      <ion-label floating> Project Type </ion-label>\n\n      <ion-select [(ngModel)]="project-type">\n\n        <ion-option value="ubuildit"> UBuildIt </ion-option>\n\n        <ion-option value="other"> Other </ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n  <br><br><br>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\projects-edit\projects-edit.html"*/
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* ViewController */]])
     ], ProjectsEditPage);
     return ProjectsEditPage;
-    var _a;
 }());
 //# sourceMappingURL=projects-edit.js.map
 
@@ -35596,7 +35625,7 @@ var SignupPage = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
             selector: 'page-signup',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header text-center">\n\n    <h1> Sign Up </h1>\n\n  </div>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Email Address -->\n\n    <ion-item>\n\n      <ion-label floating> Email Address </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Username -->\n\n    <ion-item>\n\n      <ion-label floating> Username </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Password -->\n\n    <ion-item>\n\n      <ion-label floating> Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n    <!-- Confirm Password -->\n\n    <ion-item>\n\n      <ion-label floating> Confirm Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <!-- Button -->\n\n  <button ion-button block class="btn btn-success" (click)="signUp()"> Sign Up </button>\n\n  <!-- Link -->\n\n  <div class="text-center padding-top">\n\n    <p class="text-muted"> <b> Already have an account? </b>\n\n      <a (click)="goToLogin()"> <b> Log in </b> </a>\n\n    </p>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* LoadingController */]])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
     ], SignupPage);
     return SignupPage;
 }());
@@ -54936,7 +54965,7 @@ var QUEUE_CHANGE_DETECTION = 0;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_74__components_popover_popover_component__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_75__components_toast_toast_component__ = __webpack_require__(192);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return IONIC_DIRECTIVES; });
-/* unused harmony reexport ActionSheetController */
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_59__components_action_sheet_action_sheet__["b"]; });
 /* unused harmony reexport ActionSheet */
 /* unused harmony reexport AlertController */
 /* unused harmony reexport Alert */
@@ -54965,7 +54994,7 @@ var QUEUE_CHANGE_DETECTION = 0;
 /* unused harmony reexport InfiniteScrollContent */
 /* unused harmony reexport TextArea */
 /* unused harmony reexport TextInput */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_15__components_app_app_root__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_15__components_app_app_root__["b"]; });
 /* unused harmony reexport ItemContent */
 /* unused harmony reexport Item */
 /* unused harmony reexport ItemGroup */
@@ -54977,7 +55006,7 @@ var QUEUE_CHANGE_DETECTION = 0;
 /* unused harmony reexport List */
 /* unused harmony reexport ListHeader */
 /* unused harmony reexport Loading */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_62__components_loading_loading__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_62__components_loading_loading__["a"]; });
 /* unused harmony reexport Menu */
 /* unused harmony reexport MenuClose */
 /* unused harmony reexport MenuController */
@@ -72180,9 +72209,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */])
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */],
@@ -72257,7 +72286,7 @@ var MyApp = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
             template: "<ion-nav [root]=\"rootPage\"></ion-nav>"
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Platform */]])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */]])
     ], MyApp);
     return MyApp;
 }());
@@ -91286,7 +91315,7 @@ var PanRecognizer = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__navigation_nav_params__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__navigation_nav_util__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__navigation_view_controller__ = __webpack_require__(8);
-/* harmony export (binding) */ __webpack_require__.d(exports, "c", function() { return IonicModule; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "d", function() { return IonicModule; });
 /* unused harmony export provideLocationStrategy */
 /* unused harmony export provideUserAgent */
 /* unused harmony export provideNavigatorPlatform */
@@ -91296,7 +91325,7 @@ var PanRecognizer = (function () {
 /* unused harmony reexport Config */
 /* unused harmony reexport setupConfig */
 /* unused harmony reexport ConfigToken */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_20__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_20__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* unused harmony reexport UserAgentToken */
 /* unused harmony reexport DocumentDirToken */
@@ -91313,7 +91342,7 @@ var PanRecognizer = (function () {
 /* unused harmony reexport DeepLink */
 /* unused harmony reexport DeepLinkConfigToken */
 /* unused harmony reexport UrlSerializer */
-/* unused harmony reexport ViewController */
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_43__navigation_view_controller__["a"]; });
 
 
 
