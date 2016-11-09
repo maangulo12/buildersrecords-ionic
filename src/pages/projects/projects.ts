@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, ActionSheetController } from 'ionic-angular';
 
 import { ProjectsEditPage } from '../projects-edit/projects-edit';
 
@@ -18,7 +18,8 @@ export class ProjectsPage {
 
   constructor(
     public navCtrl: NavController,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    public actionSheetCtrl: ActionSheetController
   ) {
 
   }
@@ -26,6 +27,28 @@ export class ProjectsPage {
   goToProjectsEdit() {
     let modal = this.modalCtrl.create(ProjectsEditPage);
     modal.present();
+  }
+
+  deleteProject() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Delete Project',
+      buttons: [
+        {
+          text: 'Delete',
+          role: 'destructive',
+          handler: () => {
+            console.log('Delete clicked');
+          }
+        },{
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
   }
 
 }
