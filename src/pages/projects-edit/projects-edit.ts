@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'page-projects-edit',
@@ -7,8 +7,19 @@ import { NavController } from 'ionic-angular';
 })
 export class ProjectsEditPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    public viewCtrl: ViewController
+  ) {
 
+  }
+
+  dismissModal() {
+    this.viewCtrl.dismiss();
+  }
+
+  saveProject() {
+    
   }
 
 }
