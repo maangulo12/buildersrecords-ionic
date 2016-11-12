@@ -23121,7 +23121,8 @@ var LoginPage = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__projects_edit_projects_edit__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__projects_new_projects_new__ = __webpack_require__(588);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__projects_edit_projects_edit__ = __webpack_require__(199);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProjectsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -23132,6 +23133,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -23147,13 +23149,16 @@ var ProjectsPage = (function () {
             }
         ];
     }
+    ProjectsPage.prototype.goToProjectsNew = function () {
+        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__projects_new_projects_new__["a" /* ProjectsNewPage */]);
+        modal.present();
+    };
     ProjectsPage.prototype.goToProjectsEdit = function () {
-        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__projects_edit_projects_edit__["a" /* ProjectsEditPage */]);
+        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__projects_edit_projects_edit__["a" /* ProjectsEditPage */]);
         modal.present();
     };
     ProjectsPage.prototype.deleteProject = function () {
         var actionSheet = this.actionSheetCtrl.create({
-            title: 'Delete Project',
             buttons: [
                 {
                     text: 'Delete',
@@ -23174,11 +23179,12 @@ var ProjectsPage = (function () {
     };
     ProjectsPage = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
-            selector: 'page-projects',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header">\n\n    <h1> Projects </h1>\n\n  </div>\n\n  <!-- Button -->\n\n  <ion-fab top right>\n\n    <button ion-fab mini class="btn btn-success"><ion-icon name="add"></ion-icon></button>\n\n  </ion-fab>\n\n  <!-- Projects -->\n\n  <ion-card *ngFor="let project of projects">\n\n    <!-- Card Header -->\n\n    <ion-card-header color>\n\n      <span class="glyphicon glyphicon-home padding-glyphicon" aria-hidden="true"></span>\n\n      <a class="text-success"> <b> {{ project.name }} </b> </a>\n\n    </ion-card-header>\n\n    <!-- Card Content -->\n\n    <ion-card-content> {{ project.address }} </ion-card-content>    \n\n    <!-- Card Bottom -->\n\n    <ion-item>\n\n      <span item-left (click)="goToProjectsEdit()"> \n\n        <span class="glyphicon glyphicon-cog padding-glyphicon" aria-hidden="true"></span> Edit \n\n      </span>\n\n      <span item-right class="text-danger" (click)="deleteProject()"> \n\n        <span class="glyphicon glyphicon-trash padding-glyphicon" aria-hidden="true"></span> Delete \n\n      </span>\n\n    </ion-item>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/
+            selector: 'page-projects',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header">\n\n    <h1> Projects </h1>\n\n  </div>\n\n  <!-- Button -->\n\n  <ion-fab top right>\n\n    <button ion-fab mini class="btn btn-success" (click)="goToProjectsNew()"><ion-icon name="add"></ion-icon></button>\n\n  </ion-fab>\n\n  <!-- Projects -->\n\n  <ion-card *ngFor="let project of projects">\n\n    <!-- Card Header -->\n\n    <ion-card-header color>\n\n      <span class="glyphicon glyphicon-home padding-glyphicon" aria-hidden="true"></span>\n\n      <a class="text-success"> <b> {{ project.name }} </b> </a>\n\n    </ion-card-header>\n\n    <!-- Card Content -->\n\n    <ion-card-content> {{ project.address }} </ion-card-content>    \n\n    <!-- Card Bottom -->\n\n    <ion-item>\n\n      <span item-left (click)="goToProjectsEdit()"> \n\n        <span class="glyphicon glyphicon-cog padding-glyphicon" aria-hidden="true"></span> Edit \n\n      </span>\n\n      <span item-right class="text-danger" (click)="deleteProject()"> \n\n        <span class="glyphicon glyphicon-trash padding-glyphicon" aria-hidden="true"></span> Delete \n\n      </span>\n\n    </ion-item>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\projects\projects.html"*/
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ActionSheetController */]])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* ModalController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* ModalController */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ActionSheetController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ActionSheetController */]) === 'function' && _c) || Object])
     ], ProjectsPage);
     return ProjectsPage;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=projects.js.map
 
@@ -72179,6 +72185,7 @@ exports.isFunction = isFunction;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_signup_signup__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__ = __webpack_require__(588);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -72196,6 +72203,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -72206,7 +72214,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__["a" /* ProjectsPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */]
+                __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */])
@@ -72217,7 +72226,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__["a" /* ProjectsPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */]
+                __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
             ],
             providers: []
         }), 
@@ -93503,6 +93513,46 @@ exports.tryCatch = tryCatch;
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.dev.js.map
+
+/***/ },
+/* 588 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(61);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProjectsNewPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProjectsNewPage = (function () {
+    function ProjectsNewPage(navCtrl, viewCtrl) {
+        this.navCtrl = navCtrl;
+        this.viewCtrl = viewCtrl;
+    }
+    ProjectsNewPage.prototype.dismissModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    ProjectsNewPage.prototype.saveProject = function () {
+    };
+    ProjectsNewPage = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
+            selector: 'page-projects-new',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\projects-new\projects-new.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">    \n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n    <!-- Cancel Button -->\n\n    <ion-buttons start>\n\n      <button ion-button class="btn btn-default" (click)="dismissModal()">\n\n        <span color="light"> Cancel </span>\n\n      </button>\n\n    </ion-buttons>\n\n    <!-- Save Button -->\n\n    <ion-buttons end>\n\n      <button ion-button class="btn btn-success" (click)="saveProject()">\n\n        <span color="light"> Save </span>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Project Name -->\n\n    <ion-item>\n\n      <ion-label floating> Project Name </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Address -->\n\n    <ion-item>\n\n      <ion-label floating> Address </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- City -->\n\n    <ion-item>\n\n      <ion-label floating> City </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- State -->\n\n    <ion-item>\n\n      <ion-label floating> State </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Zipcode -->\n\n    <ion-item>\n\n      <ion-label floating> Zipcode </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Home Square Feet -->\n\n    <ion-item>\n\n      <ion-label floating> Home Square Feet </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Project Type -->\n\n    <ion-item>\n\n      <ion-label floating> Project Type </ion-label>\n\n      <ion-select [(ngModel)]="project-type">\n\n        <ion-option value="ubuildit"> UBuildIt </ion-option>\n\n        <ion-option value="other"> Other </ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n  <br><br><br>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\projects-new\projects-new.html"*/
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* ViewController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* ViewController */]) === 'function' && _b) || Object])
+    ], ProjectsNewPage);
+    return ProjectsNewPage;
+    var _a, _b;
+}());
+//# sourceMappingURL=projects-new.js.map
 
 /***/ }
 /******/ ]);

@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">    
+    <!-- Title -->
+    <ion-title> BuildersRecords </ion-title>
+    <!-- Cancel Button -->
+    <ion-buttons start>
+      <button ion-button class="btn btn-default" (click)="dismissModal()">
+        <span color="light"> Cancel </span>
+      </button>
+    </ion-buttons>
+    <!-- Save Button -->
+    <ion-buttons end>
+      <button ion-button class="btn btn-success" (click)="saveProject()">
+        <span color="light"> Save </span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Inputs -->
+  <ion-list>
+    <!-- Project Name -->
+    <ion-item>
+      <ion-label floating> Project Name </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- Address -->
+    <ion-item>
+      <ion-label floating> Address </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- City -->
+    <ion-item>
+      <ion-label floating> City </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- State -->
+    <ion-item>
+      <ion-label floating> State </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- Zipcode -->
+    <ion-item>
+      <ion-label floating> Zipcode </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- Home Square Feet -->
+    <ion-item>
+      <ion-label floating> Home Square Feet </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <!-- Project Type -->
+    <ion-item>
+      <ion-label floating> Project Type </ion-label>
+      <ion-select [(ngModel)]="project-type">
+        <ion-option value="ubuildit"> UBuildIt </ion-option>
+        <ion-option value="other"> Other </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br><br><br>
+</ion-content>

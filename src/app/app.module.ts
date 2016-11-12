@@ -6,6 +6,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ProjectsPage } from '../pages/projects/projects';
 import { ProjectsEditPage } from '../pages/projects-edit/projects-edit';
+import { ProjectsNewPage } from '../pages/projects-new/projects-new';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProjectsEditPage } from '../pages/projects-edit/projects-edit';
     LoginPage,
     SignupPage,
     ProjectsPage,
-    ProjectsEditPage
+    ProjectsEditPage,
+    ProjectsNewPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +26,8 @@ import { ProjectsEditPage } from '../pages/projects-edit/projects-edit';
     LoginPage,
     SignupPage,
     ProjectsPage,
-    ProjectsEditPage
+    ProjectsEditPage,
+    ProjectsNewPage
   ],
   providers: []
 })
