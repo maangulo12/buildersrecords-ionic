@@ -12,7 +12,7 @@
   </div>
   <!-- Button -->
   <ion-fab top right>
-    <button ion-fab mini class="btn btn-success"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab mini class="btn btn-success" (click)="goToProjectsNew()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
   <!-- Projects -->
   <ion-card *ngFor="let project of projects">
