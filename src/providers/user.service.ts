@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
+import { ConstantService } from './constant.service';
 import { User } from '../models/user';
 
 @Injectable()
 export class UserService {
-    apiUrl = 'https://buildersrecords-api-staging.herokuapp.com';
 
-    constructor(public http: Http) { }
+    constructor(
+        public http: Http,
+        public constantService: ConstantService
+    ) { 
+
+    }
+
+    
 }
