@@ -3,16 +3,19 @@ import { NavController, LoadingController } from 'ionic-angular';
 
 import { ProjectsPage } from '../projects/projects';
 import { SignupPage } from '../signup/signup';
+import { UserService } from '../../providers/user.service';
 
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html'
+  templateUrl: 'login.html',
+  providers: [UserService]
 })
 export class LoginPage {
 
   constructor(
     public navCtrl: NavController, 
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    private userService: UserService
   ) { 
     
   }
