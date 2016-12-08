@@ -1,42 +1,40 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import { ProjectsPage } from '../projects/projects';
 import { LoginPage } from '../login/login';
+import { User } from '../../models/user';
+import { UserService } from '../../providers/user.service';
 
 @Component({
   selector: 'page-signup',
-  templateUrl: 'signup.html'
+  templateUrl: 'signup.html',
+  providers: [UserService]
 })
 export class SignupPage {
 
   constructor(
-    public navCtrl: NavController, 
-    public loadingCtrl: LoadingController
-  ) {
-
-  }
+    public navCtrl: NavController,
+    private userService: UserService
+  ) {}
 
   signUp() {
-    // Do authentication here
+    // Add user
 
-    // Present Loading 
-    this.presentLoading();
-
-    // Go to Projects page
+    // Success
     this.navCtrl.push(ProjectsPage);
   }
 
   goToLogin() {
     this.navCtrl.push(LoginPage);
-  }
+  } 
 
-  presentLoading() {
-    let loader = this.loadingCtrl.create({
-      content: "Please wait...",
-      duration: 50
-    });
-    loader.present();
+  addUser(user: User) {
+    if (!user) { return; }
+    this.userService.addUser(user)
+      .subscribe(
+        user  => this.user = user,
+        error => this.errorMessage = <any>error
+      );
   }
-
 }
