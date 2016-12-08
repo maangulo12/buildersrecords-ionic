@@ -72229,6 +72229,7 @@ exports.isFunction = isFunction;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_constant_service__ = __webpack_require__(590);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -72239,6 +72240,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -72271,6 +72273,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__["a" /* ProjectsPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_8__providers_constant_service__["a" /* ConstantService */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -93564,6 +93569,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(524);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constant_service__ = __webpack_require__(590);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -93576,19 +93582,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var UserService = (function () {
-    function UserService(http) {
+    function UserService(http, constantService) {
         this.http = http;
-        this.apiUrl = 'https://buildersrecords-api-staging.herokuapp.com';
+        this.constantService = constantService;
     }
     UserService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__constant_service__["a" /* ConstantService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__constant_service__["a" /* ConstantService */]) === 'function' && _b) || Object])
     ], UserService);
     return UserService;
-    var _a;
+    var _a, _b;
 }());
 //# sourceMappingURL=user.service.js.map
+
+/***/ },
+/* 590 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ConstantService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ConstantService = (function () {
+    function ConstantService() {
+        this.API_ENDPOINT = 'https://buildersrecords-api-staging.herokuapp.com/api';
+    }
+    ConstantService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(), 
+        __metadata('design:paramtypes', [])
+    ], ConstantService);
+    return ConstantService;
+}());
+//# sourceMappingURL=constant.service.js.map
 
 /***/ }
 /******/ ]);
