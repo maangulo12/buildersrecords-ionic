@@ -11415,12 +11415,11 @@ var AppPortal;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__translation_translate_pipe__ = __webpack_require__(570);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "g", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["d"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "h", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["e"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "g", function() { return __WEBPACK_IMPORTED_MODULE_1__directives__["d"]; });
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
@@ -23068,7 +23067,6 @@ exports.AnonymousSubject = AnonymousSubject;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__projects_projects__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_user_service__ = __webpack_require__(589);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -23083,39 +23081,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var LoginPage = (function () {
-    function LoginPage(navCtrl, loadingCtrl, userService) {
+    function LoginPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.loadingCtrl = loadingCtrl;
-        this.userService = userService;
     }
     LoginPage.prototype.logIn = function () {
         // Authenticate
-        // Present Loading 
-        this.presentLoading();
-        // Go to Projects page
+        // Success
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__projects_projects__["a" /* ProjectsPage */]);
     };
     LoginPage.prototype.goToSignup = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__signup_signup__["a" /* SignupPage */]);
     };
-    LoginPage.prototype.presentLoading = function () {
-        var loader = this.loadingCtrl.create({
-            content: "Please wait...",
-            duration: 50
-        });
-        loader.present();
-    };
     LoginPage = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="page-header text-center">\n\n    <h1> Log In </h1>\n\n  </div>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Username or Email -->\n\n    <ion-item>\n\n      <ion-label floating> Username or Email </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Password -->\n\n    <ion-item>\n\n      <ion-label floating> Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <!-- Button -->\n\n  <button ion-button block class="btn btn-success" (click)="logIn()"> Log In </button>\n\n  <!-- Link -->\n\n  <div class="text-center padding-top">\n\n    <p class="text-muted"> <b> Don\'t have an account? </b>\n\n      <a (click)="goToSignup()"> <b> Sign up! </b> </a>\n\n    </p>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\login\login.html"*/,
-            providers: [__WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */]]
+            selector: 'page-login',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="page-header text-center">\n\n    <h1> Log In </h1>\n\n  </div>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Username or Email -->\n\n    <ion-item>\n\n      <ion-label floating> Username or Email </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Password -->\n\n    <ion-item>\n\n      <ion-label floating> Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <!-- Button -->\n\n  <button ion-button block class="btn btn-success" (click)="logIn()"> Log In </button>\n\n  <!-- Link -->\n\n  <div class="text-center padding-top">\n\n    <p class="text-muted"> <b> Don\'t have an account? </b>\n\n      <a (click)="goToSignup()"> <b> Sign up! </b> </a>\n\n    </p>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\login\login.html"*/
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object])
     ], LoginPage);
     return LoginPage;
-    var _a, _b, _c;
+    var _a;
 }());
 //# sourceMappingURL=login.js.map
 
@@ -35634,6 +35619,7 @@ var ProjectsNewPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__projects_projects__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_user_service__ = __webpack_require__(589);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SignupPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -35648,35 +35634,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SignupPage = (function () {
-    function SignupPage(navCtrl, loadingCtrl) {
+    function SignupPage(navCtrl, userService) {
         this.navCtrl = navCtrl;
-        this.loadingCtrl = loadingCtrl;
+        this.userService = userService;
     }
     SignupPage.prototype.signUp = function () {
-        // Do authentication here
-        // Present Loading 
-        this.presentLoading();
-        // Go to Projects page
+        // Add user
+        // Success
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__projects_projects__["a" /* ProjectsPage */]);
     };
     SignupPage.prototype.goToLogin = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
     };
-    SignupPage.prototype.presentLoading = function () {
-        var loader = this.loadingCtrl.create({
-            content: "Please wait...",
-            duration: 50
-        });
-        loader.present();
+    SignupPage.prototype.addUser = function (user) {
+        var _this = this;
+        if (!user) {
+            return;
+        }
+        this.userService.addUser(user)
+            .subscribe(function (user) { return _this.user = user; }, function (error) { return _this.errorMessage = error; });
     };
     SignupPage = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header text-center">\n\n    <h1> Sign Up </h1>\n\n  </div>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Email Address -->\n\n    <ion-item>\n\n      <ion-label floating> Email Address </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Username -->\n\n    <ion-item>\n\n      <ion-label floating> Username </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Password -->\n\n    <ion-item>\n\n      <ion-label floating> Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n    <!-- Confirm Password -->\n\n    <ion-item>\n\n      <ion-label floating> Confirm Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <!-- Button -->\n\n  <button ion-button block class="btn btn-success" (click)="signUp()"> Sign Up </button>\n\n  <!-- Link -->\n\n  <div class="text-center padding-top">\n\n    <p class="text-muted"> <b> Already have an account? </b>\n\n      <a (click)="goToLogin()"> <b> Log in </b> </a>\n\n    </p>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/
+            selector: 'page-signup',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header text-center">\n\n    <h1> Sign Up </h1>\n\n  </div>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Email Address -->\n\n    <ion-item>\n\n      <ion-label floating> Email Address </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Username -->\n\n    <ion-item>\n\n      <ion-label floating> Username </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Password -->\n\n    <ion-item>\n\n      <ion-label floating> Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n    <!-- Confirm Password -->\n\n    <ion-item>\n\n      <ion-label floating> Confirm Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <!-- Button -->\n\n  <button ion-button block class="btn btn-success" (click)="signUp()"> Sign Up </button>\n\n  <!-- Link -->\n\n  <div class="text-center padding-top">\n\n    <p class="text-muted"> <b> Already have an account? </b>\n\n      <a (click)="goToLogin()"> <b> Log in </b> </a>\n\n    </p>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/,
+            providers: [__WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */]]
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */]) === 'function' && _b) || Object])
     ], SignupPage);
     return SignupPage;
+    var _a, _b;
 }());
 //# sourceMappingURL=signup.js.map
 
@@ -55043,7 +55031,7 @@ var QUEUE_CHANGE_DETECTION = 0;
 /* unused harmony reexport InfiniteScrollContent */
 /* unused harmony reexport TextArea */
 /* unused harmony reexport TextInput */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_15__components_app_app_root__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_15__components_app_app_root__["b"]; });
 /* unused harmony reexport ItemContent */
 /* unused harmony reexport Item */
 /* unused harmony reexport ItemGroup */
@@ -55055,7 +55043,7 @@ var QUEUE_CHANGE_DETECTION = 0;
 /* unused harmony reexport List */
 /* unused harmony reexport ListHeader */
 /* unused harmony reexport Loading */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_62__components_loading_loading__["a"]; });
+/* unused harmony reexport LoadingController */
 /* unused harmony reexport Menu */
 /* unused harmony reexport MenuClose */
 /* unused harmony reexport MenuController */
@@ -72263,9 +72251,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */])
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */],
@@ -72343,7 +72331,7 @@ var MyApp = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
             template: "<ion-nav [root]=\"rootPage\"></ion-nav>"
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */]])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */]])
     ], MyApp);
     return MyApp;
 }());
@@ -82003,6 +81991,9 @@ var ReactiveFormsModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index__ = __webpack_require__(526);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["e"]; });
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -82140,15 +82131,15 @@ var JsonpModule = (function () {
 /* unused harmony reexport XHRBackend */
 /* unused harmony reexport XHRConnection */
 /* unused harmony reexport BaseRequestOptions */
-/* unused harmony reexport RequestOptions */
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__base_request_options__["a"]; });
 /* unused harmony reexport BaseResponseOptions */
 /* unused harmony reexport ResponseOptions */
 /* unused harmony reexport ReadyState */
 /* unused harmony reexport RequestMethod */
 /* unused harmony reexport ResponseContentType */
 /* unused harmony reexport ResponseType */
-/* unused harmony reexport Headers */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__http__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_6__headers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_7__http__["a"]; });
 /* unused harmony reexport Jsonp */
 /* harmony reexport (binding) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_8__http_module__["a"]; });
 /* unused harmony reexport JsonpModule */
@@ -82156,7 +82147,7 @@ var JsonpModule = (function () {
 /* unused harmony reexport ConnectionBackend */
 /* unused harmony reexport XSRFStrategy */
 /* unused harmony reexport Request */
-/* unused harmony reexport Response */
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_11__static_response__["a"]; });
 /* unused harmony reexport QueryEncoder */
 /* unused harmony reexport URLSearchParams */
 /**
@@ -93569,7 +93560,13 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(524);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constant_service__ = __webpack_require__(590);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(595);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(591);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constant_service__ = __webpack_require__(590);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -93583,14 +93580,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var UserService = (function () {
     function UserService(http, constantService) {
         this.http = http;
         this.constantService = constantService;
+        this.userUrl = this.constantService.API_ENDPOINT + '/users';
     }
+    // Get user function
+    UserService.prototype.getUser = function () { };
+    // Add user function
+    UserService.prototype.addUser = function (user) {
+        var body = JSON.stringify(user);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.userUrl, body, options)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    // Update user function
+    UserService.prototype.updateUser = function () { };
+    UserService.prototype.extractData = function (res) {
+        var body = res.json();
+        return body.data || {};
+    };
+    UserService.prototype.handleError = function (error) {
+        var errMsg;
+        if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Response */]) {
+            var body = error.json() || '';
+            var err = body.error || JSON.stringify(body);
+            errMsg = error.status + " - " + (error.statusText || '') + " " + err;
+        }
+        else {
+            errMsg = error.message ? error.message : error.toString();
+        }
+        console.error(errMsg);
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
+    };
     UserService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__constant_service__["a" /* ConstantService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__constant_service__["a" /* ConstantService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__constant_service__["a" /* ConstantService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__constant_service__["a" /* ConstantService */]) === 'function' && _b) || Object])
     ], UserService);
     return UserService;
     var _a, _b;
@@ -93625,6 +93656,401 @@ var ConstantService = (function () {
     return ConstantService;
 }());
 //# sourceMappingURL=constant.service.js.map
+
+/***/ },
+/* 591 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var Observable_1 = __webpack_require__(22);
+var map_1 = __webpack_require__(592);
+Observable_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
+
+/***/ },
+/* 592 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscriber_1 = __webpack_require__(441);
+/**
+ * Applies a given `project` function to each value emitted by the source
+ * Observable, and emits the resulting values as an Observable.
+ *
+ * <span class="informal">Like [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map),
+ * it passes each source value through a transformation function to get
+ * corresponding output values.</span>
+ *
+ * <img src="./img/map.png" width="100%">
+ *
+ * Similar to the well known `Array.prototype.map` function, this operator
+ * applies a projection to each value and emits that projection in the output
+ * Observable.
+ *
+ * @example <caption>Map every every click to the clientX position of that click</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var positions = clicks.map(ev => ev.clientX);
+ * positions.subscribe(x => console.log(x));
+ *
+ * @see {@link mapTo}
+ * @see {@link pluck}
+ *
+ * @param {function(value: T, index: number): R} project The function to apply
+ * to each `value` emitted by the source Observable. The `index` parameter is
+ * the number `i` for the i-th emission that has happened since the
+ * subscription, starting from the number `0`.
+ * @param {any} [thisArg] An optional argument to define what `this` is in the
+ * `project` function.
+ * @return {Observable<R>} An Observable that emits the values from the source
+ * Observable transformed by the given `project` function.
+ * @method map
+ * @owner Observable
+ */
+function map(project, thisArg) {
+    if (typeof project !== 'function') {
+        throw new TypeError('argument is not a function. Are you looking for `mapTo()`?');
+    }
+    return this.lift(new MapOperator(project, thisArg));
+}
+exports.map = map;
+var MapOperator = (function () {
+    function MapOperator(project, thisArg) {
+        this.project = project;
+        this.thisArg = thisArg;
+    }
+    MapOperator.prototype.call = function (subscriber, source) {
+        return source._subscribe(new MapSubscriber(subscriber, this.project, this.thisArg));
+    };
+    return MapOperator;
+}());
+exports.MapOperator = MapOperator;
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var MapSubscriber = (function (_super) {
+    __extends(MapSubscriber, _super);
+    function MapSubscriber(destination, project, thisArg) {
+        _super.call(this, destination);
+        this.project = project;
+        this.count = 0;
+        this.thisArg = thisArg || this;
+    }
+    // NOTE: This looks unoptimized, but it's actually purposefully NOT
+    // using try/catch optimizations.
+    MapSubscriber.prototype._next = function (value) {
+        var result;
+        try {
+            result = this.project.call(this.thisArg, value, this.count++);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        this.destination.next(result);
+    };
+    return MapSubscriber;
+}(Subscriber_1.Subscriber));
+//# sourceMappingURL=map.js.map
+
+/***/ },
+/* 593 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscriber_1 = __webpack_require__(441);
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var InnerSubscriber = (function (_super) {
+    __extends(InnerSubscriber, _super);
+    function InnerSubscriber(parent, outerValue, outerIndex) {
+        _super.call(this);
+        this.parent = parent;
+        this.outerValue = outerValue;
+        this.outerIndex = outerIndex;
+        this.index = 0;
+    }
+    InnerSubscriber.prototype._next = function (value) {
+        this.parent.notifyNext(this.outerValue, value, this.outerIndex, this.index++, this);
+    };
+    InnerSubscriber.prototype._error = function (error) {
+        this.parent.notifyError(error, this);
+        this.unsubscribe();
+    };
+    InnerSubscriber.prototype._complete = function () {
+        this.parent.notifyComplete(this);
+        this.unsubscribe();
+    };
+    return InnerSubscriber;
+}(Subscriber_1.Subscriber));
+exports.InnerSubscriber = InnerSubscriber;
+//# sourceMappingURL=InnerSubscriber.js.map
+
+/***/ },
+/* 594 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscriber_1 = __webpack_require__(441);
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var OuterSubscriber = (function (_super) {
+    __extends(OuterSubscriber, _super);
+    function OuterSubscriber() {
+        _super.apply(this, arguments);
+    }
+    OuterSubscriber.prototype.notifyNext = function (outerValue, innerValue, outerIndex, innerIndex, innerSub) {
+        this.destination.next(innerValue);
+    };
+    OuterSubscriber.prototype.notifyError = function (error, innerSub) {
+        this.destination.error(error);
+    };
+    OuterSubscriber.prototype.notifyComplete = function (innerSub) {
+        this.destination.complete();
+    };
+    return OuterSubscriber;
+}(Subscriber_1.Subscriber));
+exports.OuterSubscriber = OuterSubscriber;
+//# sourceMappingURL=OuterSubscriber.js.map
+
+/***/ },
+/* 595 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var Observable_1 = __webpack_require__(22);
+var catch_1 = __webpack_require__(596);
+Observable_1.Observable.prototype.catch = catch_1._catch;
+Observable_1.Observable.prototype._catch = catch_1._catch;
+//# sourceMappingURL=catch.js.map
+
+/***/ },
+/* 596 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var OuterSubscriber_1 = __webpack_require__(594);
+var subscribeToResult_1 = __webpack_require__(599);
+/**
+ * Catches errors on the observable to be handled by returning a new observable or throwing an error.
+ * @param {function} selector a function that takes as arguments `err`, which is the error, and `caught`, which
+ *  is the source observable, in case you'd like to "retry" that observable by returning it again. Whatever observable
+ *  is returned by the `selector` will be used to continue the observable chain.
+ * @return {Observable} an observable that originates from either the source or the observable returned by the
+ *  catch `selector` function.
+ * @method catch
+ * @owner Observable
+ */
+function _catch(selector) {
+    var operator = new CatchOperator(selector);
+    var caught = this.lift(operator);
+    return (operator.caught = caught);
+}
+exports._catch = _catch;
+var CatchOperator = (function () {
+    function CatchOperator(selector) {
+        this.selector = selector;
+    }
+    CatchOperator.prototype.call = function (subscriber, source) {
+        return source._subscribe(new CatchSubscriber(subscriber, this.selector, this.caught));
+    };
+    return CatchOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var CatchSubscriber = (function (_super) {
+    __extends(CatchSubscriber, _super);
+    function CatchSubscriber(destination, selector, caught) {
+        _super.call(this, destination);
+        this.selector = selector;
+        this.caught = caught;
+    }
+    // NOTE: overriding `error` instead of `_error` because we don't want
+    // to have this flag this subscriber as `isStopped`.
+    CatchSubscriber.prototype.error = function (err) {
+        if (!this.isStopped) {
+            var result = void 0;
+            try {
+                result = this.selector(err, this.caught);
+            }
+            catch (err) {
+                this.destination.error(err);
+                return;
+            }
+            this.unsubscribe();
+            this.destination.remove(this);
+            subscribeToResult_1.subscribeToResult(this, result);
+        }
+    };
+    return CatchSubscriber;
+}(OuterSubscriber_1.OuterSubscriber));
+//# sourceMappingURL=catch.js.map
+
+/***/ },
+/* 597 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var root_1 = __webpack_require__(79);
+var Symbol = root_1.root.Symbol;
+if (typeof Symbol === 'function') {
+    if (Symbol.iterator) {
+        exports.$$iterator = Symbol.iterator;
+    }
+    else if (typeof Symbol.for === 'function') {
+        exports.$$iterator = Symbol.for('iterator');
+    }
+}
+else {
+    if (root_1.root.Set && typeof new root_1.root.Set()['@@iterator'] === 'function') {
+        // Bug for mozilla version
+        exports.$$iterator = '@@iterator';
+    }
+    else if (root_1.root.Map) {
+        // es6-shim specific logic
+        var keys = Object.getOwnPropertyNames(root_1.root.Map.prototype);
+        for (var i = 0; i < keys.length; ++i) {
+            var key = keys[i];
+            if (key !== 'entries' && key !== 'size' && root_1.root.Map.prototype[key] === root_1.root.Map.prototype['entries']) {
+                exports.$$iterator = key;
+                break;
+            }
+        }
+    }
+    else {
+        exports.$$iterator = '@@iterator';
+    }
+}
+//# sourceMappingURL=iterator.js.map
+
+/***/ },
+/* 598 */
+/***/ function(module, exports) {
+
+"use strict";
+"use strict";
+function isPromise(value) {
+    return value && typeof value.subscribe !== 'function' && typeof value.then === 'function';
+}
+exports.isPromise = isPromise;
+//# sourceMappingURL=isPromise.js.map
+
+/***/ },
+/* 599 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var root_1 = __webpack_require__(79);
+var isArray_1 = __webpack_require__(584);
+var isPromise_1 = __webpack_require__(598);
+var Observable_1 = __webpack_require__(22);
+var iterator_1 = __webpack_require__(597);
+var InnerSubscriber_1 = __webpack_require__(593);
+var observable_1 = __webpack_require__(581);
+function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
+    var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
+    if (destination.closed) {
+        return null;
+    }
+    if (result instanceof Observable_1.Observable) {
+        if (result._isScalar) {
+            destination.next(result.value);
+            destination.complete();
+            return null;
+        }
+        else {
+            return result.subscribe(destination);
+        }
+    }
+    if (isArray_1.isArray(result)) {
+        for (var i = 0, len = result.length; i < len && !destination.closed; i++) {
+            destination.next(result[i]);
+        }
+        if (!destination.closed) {
+            destination.complete();
+        }
+    }
+    else if (isPromise_1.isPromise(result)) {
+        result.then(function (value) {
+            if (!destination.closed) {
+                destination.next(value);
+                destination.complete();
+            }
+        }, function (err) { return destination.error(err); })
+            .then(null, function (err) {
+            // Escaping the Promise trap: globally throw unhandled errors
+            root_1.root.setTimeout(function () { throw err; });
+        });
+        return destination;
+    }
+    else if (typeof result[iterator_1.$$iterator] === 'function') {
+        var iterator = result[iterator_1.$$iterator]();
+        do {
+            var item = iterator.next();
+            if (item.done) {
+                destination.complete();
+                break;
+            }
+            destination.next(item.value);
+            if (destination.closed) {
+                break;
+            }
+        } while (true);
+    }
+    else if (typeof result[observable_1.$$observable] === 'function') {
+        var obs = result[observable_1.$$observable]();
+        if (typeof obs.subscribe !== 'function') {
+            destination.error(new Error('invalid observable'));
+        }
+        else {
+            return obs.subscribe(new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex));
+        }
+    }
+    else {
+        destination.error(new TypeError('unknown type returned'));
+    }
+    return null;
+}
+exports.subscribeToResult = subscribeToResult;
+//# sourceMappingURL=subscribeToResult.js.map
 
 /***/ }
 /******/ ]);
