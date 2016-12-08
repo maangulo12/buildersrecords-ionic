@@ -28,7 +28,6 @@ import { ProjectsNewPage } from '../pages/projects-new/projects-new';
     ProjectsPage,
     ProjectsEditPage,
     ProjectsNewPage
-  ],
-  providers: []
+  ]
 })
 export class AppModule {}
