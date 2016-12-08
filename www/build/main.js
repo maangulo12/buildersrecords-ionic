@@ -23091,7 +23091,7 @@ var LoginPage = (function () {
         this.userService = userService;
     }
     LoginPage.prototype.logIn = function () {
-        // Do authentication here
+        // Authenticate
         // Present Loading 
         this.presentLoading();
         // Go to Projects page

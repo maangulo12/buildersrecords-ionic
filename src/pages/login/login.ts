@@ -3,6 +3,7 @@ import { NavController, LoadingController } from 'ionic-angular';
 
 import { ProjectsPage } from '../projects/projects';
 import { SignupPage } from '../signup/signup';
+import { User } from '../../models/user';
 import { UserService } from '../../providers/user.service';
 
 @Component({
@@ -12,16 +13,16 @@ import { UserService } from '../../providers/user.service';
 })
 export class LoginPage {
 
+  user: User;
+
   constructor(
     public navCtrl: NavController, 
     public loadingCtrl: LoadingController,
     private userService: UserService
-  ) { 
-    
-  }
+  ) {}
 
   logIn() {
-    // Do authentication here
+    // Authenticate
 
     // Present Loading 
     this.presentLoading();
@@ -41,5 +42,4 @@ export class LoginPage {
     });
     loader.present();
   }
-
 }
