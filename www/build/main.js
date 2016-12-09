@@ -35619,7 +35619,8 @@ var ProjectsNewPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__projects_projects__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_user_service__ = __webpack_require__(589);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_user__ = __webpack_require__(600);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_service__ = __webpack_require__(589);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SignupPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -35635,10 +35636,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SignupPage = (function () {
     function SignupPage(navCtrl, userService) {
         this.navCtrl = navCtrl;
         this.userService = userService;
+        this.user = new __WEBPACK_IMPORTED_MODULE_4__models_user__["a" /* User */]('', '', '');
     }
     SignupPage.prototype.signUp = function () {
         // Add user
@@ -35653,15 +35656,16 @@ var SignupPage = (function () {
         if (!user) {
             return;
         }
-        this.userService.addUser(user)
+        this.userService
+            .addUser(user)
             .subscribe(function (user) { return _this.user = user; }, function (error) { return _this.errorMessage = error; });
     };
     SignupPage = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>  \n\n  <!-- Page Header -->\n\n  <div class="padding-header text-center">\n\n    <h1> Sign Up </h1>\n\n  </div>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Email Address -->\n\n    <ion-item>\n\n      <ion-label floating> Email Address </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Username -->\n\n    <ion-item>\n\n      <ion-label floating> Username </ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n    <!-- Password -->\n\n    <ion-item>\n\n      <ion-label floating> Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n    <!-- Confirm Password -->\n\n    <ion-item>\n\n      <ion-label floating> Confirm Password </ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <!-- Button -->\n\n  <button ion-button block class="btn btn-success" (click)="signUp()"> Sign Up </button>\n\n  <!-- Link -->\n\n  <div class="text-center padding-top">\n\n    <p class="text-muted"> <b> Already have an account? </b>\n\n      <a (click)="goToLogin()"> <b> Log in </b> </a>\n\n    </p>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/,
-            providers: [__WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */]]
+            selector: 'page-signup',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-toolbar color="primary">\n\n    <!-- Title -->\n\n    <ion-title> BuildersRecords </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <!-- Page Header -->\n\n  <div class="padding-header text-center">\n\n    <h1> Sign Up </h1>\n\n  </div>\n\n  <!-- Inputs -->\n\n  <ion-list>\n\n    <!-- Email Address -->\n\n    <ion-item>\n\n      <ion-label floating> Email Address </ion-label>\n\n      <ion-input type="text" [(ngModel)]="user.email" name="email" required></ion-input>\n\n    </ion-item>\n\n    <!-- Username -->\n\n    <ion-item>\n\n      <ion-label floating> Username </ion-label>\n\n      <ion-input type="text" [(ngModel)]="user.username" name="username" required></ion-input>\n\n    </ion-item>\n\n    <!-- Password -->\n\n    <ion-item>\n\n      <ion-label floating> Password </ion-label>\n\n      <ion-input type="password" [(ngModel)]="user.password" name="password" required></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <!-- Button -->\n\n  <button ion-button block class="btn btn-success" (click)="signUp()"> Sign Up </button>\n\n  <!-- Link -->\n\n  <div class="text-center padding-top">\n\n    <p class="text-muted"> <b> Already have an account? </b>\n\n      <a (click)="goToLogin()"> <b> Log in </b> </a>\n\n    </p>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\signup\signup.html"*/,
+            providers: [__WEBPACK_IMPORTED_MODULE_5__providers_user_service__["a" /* UserService */]]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__providers_user_service__["a" /* UserService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__providers_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__providers_user_service__["a" /* UserService */]) === 'function' && _b) || Object])
     ], SignupPage);
     return SignupPage;
     var _a, _b;
@@ -72210,14 +72214,15 @@ exports.isFunction = isFunction;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__(446);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_signup_signup__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_constant_service__ = __webpack_require__(590);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(446);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_signup_signup__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_projects_projects__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_projects_edit_projects_edit__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_projects_new_projects_new__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_constant_service__ = __webpack_require__(590);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -72237,33 +72242,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_4__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__["a" /* ProjectsPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_projects_projects__["a" /* ProjectsPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */])
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */]),
+                __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormsModule */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_4__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_projects_projects__["a" /* ProjectsPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_projects_projects__["a" /* ProjectsPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_8__providers_constant_service__["a" /* ConstantService */]
+                __WEBPACK_IMPORTED_MODULE_9__providers_constant_service__["a" /* ConstantService */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -94051,6 +94058,22 @@ function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
 }
 exports.subscribeToResult = subscribeToResult;
 //# sourceMappingURL=subscribeToResult.js.map
+
+/***/ },
+/* 600 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return User; });
+var User = (function () {
+    function User(email, username, password) {
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
+    return User;
+}());
+//# sourceMappingURL=user.js.map
 
 /***/ }
 /******/ ]);
