@@ -13,6 +13,9 @@ import { UserService } from '../../providers/user.service';
 })
 export class SignupPage {
 
+  user = new User('', '', '');
+  errorMessage: string;
+
   constructor(
     public navCtrl: NavController,
     private userService: UserService
@@ -31,10 +34,11 @@ export class SignupPage {
 
   addUser(user: User) {
     if (!user) { return; }
-    this.userService.addUser(user)
+
+    this.userService
+      .addUser(user)
       .subscribe(
         user  => this.user = user,
-        error => this.errorMessage = <any>error
-      );
+        error => this.errorMessage = <any>error);
   }
 }

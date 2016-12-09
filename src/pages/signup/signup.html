@@ -5,7 +5,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>  
+<ion-content padding>
   <!-- Page Header -->
   <div class="padding-header text-center">
     <h1> Sign Up </h1>
@@ -15,22 +15,17 @@
     <!-- Email Address -->
     <ion-item>
       <ion-label floating> Email Address </ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.email" name="email" required></ion-input>
     </ion-item>
     <!-- Username -->
     <ion-item>
       <ion-label floating> Username </ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.username" name="username" required></ion-input>
     </ion-item>
     <!-- Password -->
     <ion-item>
       <ion-label floating> Password </ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <!-- Confirm Password -->
-    <ion-item>
-      <ion-label floating> Confirm Password </ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="user.password" name="password" required></ion-input>
     </ion-item>
   </ion-list>
   <!-- Button -->
