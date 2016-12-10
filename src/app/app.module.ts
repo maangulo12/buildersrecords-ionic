@@ -18,7 +18,8 @@ import { ConstantService } from '../providers/constant.service';
     SignupPage,
     ProjectsPage,
     ProjectsEditPage,
-    ProjectsNewPage
+    ProjectsNewPage,
+    OverviewPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),

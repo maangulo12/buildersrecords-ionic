@@ -72384,7 +72384,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_projects_projects__["a" /* ProjectsPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_projects_edit_projects_edit__["a" /* ProjectsEditPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_projects_new_projects_new__["a" /* ProjectsNewPage */]
+                __WEBPACK_IMPORTED_MODULE_8__pages_projects_new_projects_new__["a" /* ProjectsNewPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_overview_overview__["a" /* OverviewPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */]),
