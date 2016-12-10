@@ -3,6 +3,7 @@ import { NavController, ModalController, ActionSheetController } from 'ionic-ang
 
 import { ProjectsNewPage } from '../projects-new/projects-new';
 import { ProjectsEditPage } from '../projects-edit/projects-edit';
+import { OverviewPage } from '../overview/overview';
 
 @Component({
   selector: 'page-projects',
@@ -23,6 +24,11 @@ export class ProjectsPage {
     public actionSheetCtrl: ActionSheetController
   ) {
 
+  }
+
+  goToOverview() {
+    let modal = this.modalCtrl.create(OverviewPage);
+    modal.present();
   }
 
   goToProjectsNew() {
