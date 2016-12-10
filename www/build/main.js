@@ -35817,11 +35817,12 @@ var OverviewPage = (function () {
     }
     OverviewPage = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
-            selector: 'page-overview',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\overview\overview.html"*/'<ion-header>\n  <ion-toolbar color="primary">\n    <!-- Title -->\n    <ion-title> BuildersRecords </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  \n</ion-content>\n'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\overview\overview.html"*/
+            selector: 'page-overview',template:/*ion-inline-start:"C:\workspace\buildersrecords-ionic\src\pages\overview\overview.html"*/'<ion-header>\n  <ion-toolbar color="primary">\n    <!-- Title -->\n    <ion-title> BuildersRecords </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-tabs>\n      <ion-tab class="glyphicon glyphicon-dashboard"></ion-tab>\n      <ion-tab class="glyphicon glyphicon-list-alt"></ion-tab>\n      <ion-tab class="glyphicon glyphicon-link"></ion-tab>\n      <ion-tab class="glyphicon glyphicon-piggy-bank"></ion-tab>\n      <ion-tab class="glyphicon glyphicon-usd"></ion-tab>\n    </ion-tabs>`\n</ion-content>\n'/*ion-inline-end:"C:\workspace\buildersrecords-ionic\src\pages\overview\overview.html"*/
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object])
     ], OverviewPage);
     return OverviewPage;
+    var _a;
 }());
 //# sourceMappingURL=overview.js.map
 

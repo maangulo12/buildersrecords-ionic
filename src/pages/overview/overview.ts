@@ -7,6 +7,12 @@ import { NavController } from 'ionic-angular';
 })
 export class OverviewPage {
 
+  tabOverview: any;
+  tabJobCost: any;
+  tabSubcontractor: any;
+  tabFunds: any;
+  tabExpenditures: any;
+
   constructor(public navCtrl: NavController) {}
 
 }
