@@ -19,11 +19,9 @@ export class UserService {
         this.userUrl = this.constantService.API_ENDPOINT + '/users';
     }
 
-    // Get user function
-    getUser(): void {}
+    get(): void {}
 
-    // Add user function
-    addUser(user: User): Observable<User> {
+    add(user: User): Observable<User> {
         let body = JSON.stringify(user);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
@@ -33,8 +31,7 @@ export class UserService {
             .catch(this.handleError);
     }
 
-    // Update user function
-    updateUser(): void {}
+    update(): void {}
 
     private extractData(res: Response) {
         let body = res.json();
