@@ -9,6 +9,10 @@ import { ProjectsPage } from '../pages/projects/projects';
 import { ProjectsEditPage } from '../pages/projects-edit/projects-edit';
 import { ProjectsNewPage } from '../pages/projects-new/projects-new';
 import { OverviewPage } from '../pages/overview/overview';
+import { JobCostPage } from '../pages/job-cost/job-cost';
+import { SubcontractorsPage } from '../pages/subcontractors/subcontractors';
+import { FundsPage } from '../pages/funds/funds';
+import { ExpendituresPage } from '../pages/expenditures/expenditures';
 import { ConstantService } from '../providers/constant.service';
 
 @NgModule({
@@ -19,7 +23,11 @@ import { ConstantService } from '../providers/constant.service';
     ProjectsPage,
     ProjectsEditPage,
     ProjectsNewPage,
-    OverviewPage
+    OverviewPage,
+    JobCostPage,
+    SubcontractorsPage,
+    FundsPage,
+    ExpendituresPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -33,7 +41,11 @@ import { ConstantService } from '../providers/constant.service';
     ProjectsPage,
     ProjectsEditPage,
     ProjectsNewPage,
-    OverviewPage
+    OverviewPage,
+    JobCostPage,
+    SubcontractorsPage,
+    FundsPage,
+    ExpendituresPage
   ],
   providers: [
     ConstantService
