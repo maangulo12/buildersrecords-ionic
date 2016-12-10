@@ -5,12 +5,8 @@ import { NavController } from 'ionic-angular';
   selector: 'page-overview',
   templateUrl: 'overview.html'
 })
-export class Overview {
+export class OverviewPage {
 
   constructor(public navCtrl: NavController) {}
-
-  ionViewDidLoad() {
-    console.log('Hello Overview Page');
-  }
 
 }
