@@ -8,6 +8,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { ProjectsPage } from '../pages/projects/projects';
 import { ProjectsEditPage } from '../pages/projects-edit/projects-edit';
 import { ProjectsNewPage } from '../pages/projects-new/projects-new';
+import { OverviewPage } from '../pages/overview/overview';
 import { ConstantService } from '../providers/constant.service';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ConstantService } from '../providers/constant.service';
     SignupPage,
     ProjectsPage,
     ProjectsEditPage,
-    ProjectsNewPage
+    ProjectsNewPage,
+    OverviewPage
   ],
   providers: [
     ConstantService
