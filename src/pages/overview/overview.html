@@ -7,10 +7,9 @@
 
 <ion-content padding>
   <ion-tabs>
-      <ion-tab class="glyphicon glyphicon-dashboard"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-list-alt"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-link"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-piggy-bank"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-usd"></ion-tab>
-    </ion-tabs>`
+    <ion-tab class="glyphicon glyphicon-list-alt" [root]="tabJobCost"></ion-tab>
+    <ion-tab class="glyphicon glyphicon-link" [root]="tabSubcontractor"></ion-tab>
+    <ion-tab class="glyphicon glyphicon-piggy-bank" [root]="tabFunds"></ion-tab>
+    <ion-tab class="glyphicon glyphicon-usd" [root]="tabExpenditures"></ion-tab>
+  </ion-tabs>
 </ion-content>
