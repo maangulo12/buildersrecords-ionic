@@ -35,8 +35,7 @@ export class SignupPage {
   addUser(user: User) {
     if (!user) { return; }
 
-    this.userService
-      .addUser(user)
+    this.userService.add(user)
       .subscribe(
         user  => this.user = user,
         error => this.errorMessage = <any>error);
