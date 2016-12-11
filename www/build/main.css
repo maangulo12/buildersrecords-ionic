@@ -19640,6 +19640,15 @@ page-login .padding-top {
   padding-top: 30px;
 }
 
+page-overview .padding-glyphicon {
+  padding-right: 5px;
+}
+
+page-overview .padding-header {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
 page-projects .padding-glyphicon {
   padding-right: 5px;
 }

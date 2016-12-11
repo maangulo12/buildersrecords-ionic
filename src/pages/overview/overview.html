@@ -6,10 +6,533 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-tabs>
-    <ion-tab class="glyphicon glyphicon-list-alt" [root]="tabJobCost"></ion-tab>
-    <ion-tab class="glyphicon glyphicon-link" [root]="tabSubcontractor"></ion-tab>
-    <ion-tab class="glyphicon glyphicon-piggy-bank" [root]="tabFunds"></ion-tab>
-    <ion-tab class="glyphicon glyphicon-usd" [root]="tabExpenditures"></ion-tab>
-  </ion-tabs>
+  <!-- Page Header -->
+  <div class="padding-header">    
+    <h1> <span class="glyphicon glyphicon-dashboard glyphicon-padding" aria-hidden="true"></span> Overview </h1>
+  </div>
+  <!-- Panel -->
+  <div class="panel panel-primary">
+      <!-- Panel Header -->
+      <div class="panel-heading">
+        <!-- Panel Title -->
+        <h4 class="panel-title">
+          <b> Project Overall </b>
+        </h4>
+      </div>
+      <!-- Panel Body -->
+      <div class="panel-body">
+          <!-- Project Overall -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b> Spending </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <b> Project Cost $269,518.42 </b>
+                  </p>
+              </div>
+          </div>
+          <!-- Progress Bar -->
+          <div class="progress progress-bar-padding">
+              <div class="progress-bar progress-bar-danger progress-bar-striped"
+                    style="width: 100%;">
+                  <span class="sr-only"> 100% Complete </span>
+              </div>
+              <div class="progress-bar progress-bar-success progress-bar-striped"
+                    style="width: 0%;">
+                  <span class="sr-only"> 0% Complete </span>
+              </div>
+          </div>
+          <!-- Progress Bar Details -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b> $275,364.03 Spent </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <span>
+                          <b> $5,845.61 Left </b>
+                      </span>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Panel -->
+  <div class="panel panel-primary">
+      <!-- Panel Header -->
+      <div class="panel-heading">
+          <!-- Panel Title -->
+          <h4 class="panel-title">
+              <b> By Categories </b>
+          </h4>          
+      </div>
+      <!-- Panel Body -->
+      <div class="panel-body">
+          <!-- Progress Bars -->
+          <div class="margin-around">
+              <!-- Category - Pre-Construction -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> Pre-Construction </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $12,535.17 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 100%;">
+                      <span class="sr-only"> 100% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 0%;">
+                      <span class="sr-only"> 0% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $100,339.84 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $87,804.67 Over </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <!-- Category - Site Development Costs -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> Site Development Costs </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $35,698.19 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 35%;">
+                      <span class="sr-only"> 35% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 65%;">
+                      <span class="sr-only"> 65% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $10,527.44 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $25,170.75 Left </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <!-- Category - Site Preparation -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> Site Preparation </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $15,578.00 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 90%;">
+                      <span class="sr-only"> 90% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 10%;">
+                      <span class="sr-only"> 10% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $14,444.93 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $1,133.07 Left </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <!-- Category - Foundation -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> Foundation </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $0.00 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 100%;">
+                      <span class="sr-only"> 100% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 0%;">
+                      <span class="sr-only"> 0% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $33,476.06 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $33,476.06 Over </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <!-- Category - Slab Work -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> Slab Work </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $45,600.64 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 40%;">
+                      <span class="sr-only"> 40% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 60%;">
+                      <span class="sr-only"> 60% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $21,217.78 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $24,382.86 Left </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <!-- Category - Main Structure -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> Main Structure </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $41,415.69 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 80%;">
+                      <span class="sr-only"> 80% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 20%;">
+                      <span class="sr-only"> 20% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $34,850.20 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $6,565.49 Left </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <!-- Category - General Trades -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> General Trades </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $89,856.26 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 30%;">
+                      <span class="sr-only"> 30% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 70%;">
+                      <span class="sr-only"> 70% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $20,769.83 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $69,086.43 Left </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <!-- Category - Interior Finishing -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> Interior Finishing </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $28,834.47 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped"
+                      style="width: 100%;">
+                      <span class="sr-only"> 100% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                      style="width: 0%;">
+                      <span class="sr-only"> 0% Complete </span>
+                  </div>
+              </div>
+              <!-- Details -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $39,737.95 Spent </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $10,903.48 Over </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Panel -->
+  <div class="panel panel-primary">
+      <!-- Panel Heading -->
+      <div class="panel-heading">
+          <!-- Panel Title -->
+          <h4 class="panel-title">
+              <b> Messer </b>
+          </h4>
+      </div>
+      <!-- Panel Body -->
+      <div class="panel-body">
+          <!-- Title -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b> Spending </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <b> $100,000.00 </b>
+                  </p>
+              </div>
+          </div>
+          <!-- Progress Bar -->
+          <div class="progress progress-bar-padding">
+              <div class="progress-bar progress-bar-danger progress-bar-striped"
+                    style="width: 70%;">
+                  <span class="sr-only"> 70% Complete </span>
+              </div>
+              <div class="progress-bar progress-bar-success progress-bar-striped"
+                    style="width: 30%;">
+                  <span class="sr-only"> 30% Complete </span>
+              </div>
+          </div>
+          <!-- Amounts -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b> $71,678.54 Spent </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <span>
+                          <b> $28,321.46 Left </b>
+                      </span>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Panel -->
+  <div class="panel panel-primary">
+      <!-- Panel Heading -->
+      <div class="panel-heading">
+          <!-- Panel Title -->
+          <h4 class="panel-title">
+              <b> Blanco Loan </b>
+          </h4>
+      </div>
+      <!-- Panel Body -->
+      <div class="panel-body">
+          <!-- Title -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b> Spending </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <b> $330,000.00 </b>
+                  </p>
+              </div>
+          </div>
+          <!-- Progress Bar -->
+          <div class="progress progress-bar-padding">
+              <div class="progress-bar progress-bar-danger progress-bar-striped"
+                    style="width: 60%;">
+                  <span class="sr-only"> 60% Complete </span>
+              </div>
+              <div class="progress-bar progress-bar-success progress-bar-striped"
+                    style="width: 40%;">
+                  <span class="sr-only"> 40% Complete </span>
+              </div>
+          </div>
+          <!-- Amounts -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b> $203,685.49 Spent </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <span>
+                          <b> $126,314.51 Left </b>
+                      </span>
+                  </p>
+              </div>
+          </div>
+          <!-- Loan Draws -->
+          <div class="margin-around">
+              <!-- Title -->
+              <div class="row">
+                  <div class="col-xs-6">
+                      <b> Loan Draws </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b> $330,000.00 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-warning progress-bar-striped"
+                        style="width: 20%;">
+                      <span class="sr-only"> 20% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                        style="width: 80%;">
+                      <span class="sr-only"> 80% Complete </span>
+                  </div>
+              </div>
+              <!-- Amounts -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b> $57,500.00 Received </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <span>
+                              <b> $272,500.00 Left </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </ion-content>

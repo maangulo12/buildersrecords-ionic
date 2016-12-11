@@ -12,11 +12,6 @@ import { ExpendituresPage } from '../expenditures/expenditures';
 })
 export class OverviewPage {
 
-  tabJobCost:       any = JobCostPage;
-  tabSubcontractor: any = SubcontractorsPage;
-  tabFunds:         any = FundsPage;
-  tabExpenditures:  any = ExpendituresPage;
-
   constructor(public navCtrl: NavController) {}
 
 }
