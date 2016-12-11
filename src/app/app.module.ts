@@ -8,6 +8,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { ProjectsPage } from '../pages/projects/projects';
 import { ProjectsEditPage } from '../pages/projects-edit/projects-edit';
 import { ProjectsNewPage } from '../pages/projects-new/projects-new';
+import { TabsPage } from '../pages/tabs/tabs';
 import { OverviewPage } from '../pages/overview/overview';
 import { JobCostPage } from '../pages/job-cost/job-cost';
 import { SubcontractorsPage } from '../pages/subcontractors/subcontractors';
