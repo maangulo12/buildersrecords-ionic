@@ -2,12 +2,18 @@
   <ion-toolbar color="primary">
     <!-- Title -->
     <ion-title> BuildersRecords </ion-title>
+    <!-- Back Button -->
+    <ion-buttons start>
+      <button ion-button class="btn btn-default" (click)="goToProjects()">
+        <span color="light"> Back </span>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <!-- Page Header -->
-  <div class="padding-header">    
+  <div class="padding-header"> 
     <h1> <span class="glyphicon glyphicon-dashboard glyphicon-padding" aria-hidden="true"></span> Overview </h1>
   </div>
   <!-- Panel -->

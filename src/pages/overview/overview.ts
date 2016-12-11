@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { JobCostPage } from '../job-cost/job-cost';
-import { SubcontractorsPage } from '../subcontractors/subcontractors';
-import { FundsPage } from '../funds/funds';
-import { ExpendituresPage } from '../expenditures/expenditures';
+import { ProjectsPage } from '../projects/projects';
 
 @Component({
   selector: 'page-overview',
@@ -14,4 +11,7 @@ export class OverviewPage {
 
   constructor(public navCtrl: NavController) {}
 
+  goToProjects() {
+    this.navCtrl.push(ProjectsPage);
+  }
 }
