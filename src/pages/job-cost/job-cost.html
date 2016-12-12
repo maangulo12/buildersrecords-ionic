@@ -3,4 +3,193 @@
   <div class="padding-header"> 
     <h1> Job Costing </h1>
   </div>
+  <!-- Button - Add -->
+  <button type="button" class="btn btn-success" title="Add Item">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <b> Add </b>
+  </button>
+  <!-- Button - Delete -->
+  <button id="delete-button" type="button" class="btn btn-danger" title="Delete Selected">
+      <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+      <b> Delete </b>
+  </button>
+  <!-- Line Break -->
+  <br><br>
+  <!-- Table -->
+  <table class="table table-condensed table-striped table-hover table-responsive">
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th style="width: 4%"> </th>
+                <th colspan="2" class="text-left"> Job Cost Category</th>
+                <th class="text-right"> Estimated Cost </th>
+                <th class="text-right"> Actual Cost </th>
+                <th colspan="2" style="width: 7%"> </th>
+            </tr>
+        </thead>
+        <!-- Table Body -->
+        <tbody>
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                  <button> + </button>
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b> Pre-Construction Costs (Permits/Fees) </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b> $3,292.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b> $12,535.17 </b>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                  <button> + </button>
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b> Site Development Costs </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b> $40,342.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b> $35,698.19 </b>
+                </td>
+            </tr>
+        </tbody>
+        <tbody ng-repeat="category in vm.categoryList" class="ng-scope">
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                    <!-- ngIf: category.expanded -->
+                    <!-- ngIf: !category.expanded --><button ng-if="!category.expanded" ng-click="category.expanded = true" class="ng-scope"> + </button><!-- end ngIf: !category.expanded -->
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b class="ng-binding"> Site Preparation </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b class="ng-binding"> $31,005.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b class="ng-binding"> $15,578.00 </b>
+                </td>
+            </tr>
+            <!-- Items -->
+            <!-- ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items -->
+        </tbody><!-- end ngRepeat: category in vm.categoryList --><tbody ng-repeat="category in vm.categoryList" class="ng-scope">
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                    <!-- ngIf: category.expanded -->
+                    <!-- ngIf: !category.expanded --><button ng-if="!category.expanded" ng-click="category.expanded = true" class="ng-scope"> + </button><!-- end ngIf: !category.expanded -->
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b class="ng-binding"> Foundation </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b class="ng-binding"> $0.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b class="ng-binding"> $0.00 </b>
+                </td>
+            </tr>
+            <!-- Items -->
+            <!-- ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items -->
+        </tbody><!-- end ngRepeat: category in vm.categoryList --><tbody ng-repeat="category in vm.categoryList" class="ng-scope">
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                    <!-- ngIf: category.expanded -->
+                    <!-- ngIf: !category.expanded --><button ng-if="!category.expanded" ng-click="category.expanded = true" class="ng-scope"> + </button><!-- end ngIf: !category.expanded -->
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b class="ng-binding"> Slab Work </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b class="ng-binding"> $45,100.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b class="ng-binding"> $45,600.64 </b>
+                </td>
+            </tr>
+            <!-- Items -->
+            <!-- ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items -->
+        </tbody><!-- end ngRepeat: category in vm.categoryList --><tbody ng-repeat="category in vm.categoryList" class="ng-scope">
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                    <!-- ngIf: category.expanded -->
+                    <!-- ngIf: !category.expanded --><button ng-if="!category.expanded" ng-click="category.expanded = true" class="ng-scope"> + </button><!-- end ngIf: !category.expanded -->
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b class="ng-binding"> Main Structure </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b class="ng-binding"> $42,730.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b class="ng-binding"> $41,415.69 </b>
+                </td>
+            </tr>
+            <!-- Items -->
+            <!-- ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items -->
+        </tbody><!-- end ngRepeat: category in vm.categoryList --><tbody ng-repeat="category in vm.categoryList" class="ng-scope">
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                    <!-- ngIf: category.expanded -->
+                    <!-- ngIf: !category.expanded --><button ng-if="!category.expanded" ng-click="category.expanded = true" class="ng-scope"> + </button><!-- end ngIf: !category.expanded -->
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b class="ng-binding"> General Trades </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b class="ng-binding"> $127,694.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b class="ng-binding"> $89,856.26 </b>
+                </td>
+            </tr>
+            <!-- Items -->
+            <!-- ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items --><!-- ngIf: category.expanded --><!-- end ngRepeat: item in category.items -->
+        </tbody><!-- end ngRepeat: category in vm.categoryList --><tbody ng-repeat="category in vm.categoryList" class="ng-scope">
+            <!-- Categories -->
+            <tr>
+                <!-- Expand Button -->
+                <td>
+                    <!-- ngIf: category.expanded -->
+                    <!-- ngIf: !category.expanded --><button ng-if="!category.expanded" ng-click="category.expanded = true" class="ng-scope"> + </button><!-- end ngIf: !category.expanded -->
+                </td>
+                <!-- Name -->
+                <td colspan="2"> <b class="ng-binding"> Interior Finishing </b> </td>
+                <!-- Estimated -->
+                <td class="text-right">
+                    <b class="ng-binding"> $70,381.00 </b>
+                </td>
+                <!-- Actual -->
+                <td class="text-right">
+                    <b class="ng-binding"> $28,834.47 </b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </ion-content>
