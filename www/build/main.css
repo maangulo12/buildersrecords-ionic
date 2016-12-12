@@ -19636,6 +19636,15 @@ sub {
   }
 }
 
+page-expenditures .padding-glyphicon {
+  padding-right: 5px;
+}
+
+page-expenditures .padding-header {
+  padding-top: 55px;
+  padding-bottom: 20px;
+}
+
 page-funds .padding-glyphicon {
   padding-right: 5px;
 }
