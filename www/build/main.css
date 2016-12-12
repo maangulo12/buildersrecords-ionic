@@ -19675,3 +19675,12 @@ page-signup .padding-header {
 page-signup .padding-top {
   padding-top: 30px;
 }
+
+page-subcontractors .padding-glyphicon {
+  padding-right: 5px;
+}
+
+page-subcontractors .padding-header {
+  padding-top: 55px;
+  padding-bottom: 20px;
+}
