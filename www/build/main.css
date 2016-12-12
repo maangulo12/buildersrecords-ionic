@@ -19636,6 +19636,15 @@ sub {
   }
 }
 
+page-funds .padding-glyphicon {
+  padding-right: 5px;
+}
+
+page-funds .padding-header {
+  padding-top: 55px;
+  padding-bottom: 20px;
+}
+
 page-job-cost .padding-glyphicon {
   padding-right: 5px;
 }
