@@ -25,4 +25,5 @@ export class TabsPage {
   goToProjects() {
     this.navCtrl.push(ProjectsPage);
   }
+  
 }
