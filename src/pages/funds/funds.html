@@ -1,16 +1,166 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <!-- Title -->
-    <ion-title> BuildersRecords </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
-  <ion-tabs>
-      <ion-tab class="glyphicon glyphicon-dashboard"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-list-alt"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-link"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-piggy-bank"></ion-tab>
-      <ion-tab class="glyphicon glyphicon-usd"></ion-tab>
-    </ion-tabs>`
+  <!-- Page Header -->
+  <div class="padding-header"> 
+    <h1> Funds </h1>
+  </div>
+  <!-- Button - Add -->
+  <button type="button" class="btn btn-success" title="Add Item">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <b> Add </b>
+  </button>
+  <!-- Line Break -->
+  <br><br>
+  <!-- Panel -->
+  <div class="panel panel-primary">
+      <!-- Panel Heading -->
+      <div class="panel-heading">
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <!-- Panel Title -->
+                  <h4 class="panel-title">
+                      <!-- Fund Name -->
+                      <b class="ng-binding"> Messer </b>
+                  </h4>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <div class="text-right">
+                      <h4 class="panel-title">
+                          <!-- Edit Fund -->
+                          <a href="" title="Edit" ng-click="updateFundModal(fund)">
+                              <span class="glyphicon glyphicon-cog glyphicon-padding" aria-hidden="true"></span>
+                          </a>
+                          <!-- Delete Fund -->
+                          <a href="" title="Delete" ng-click="deleteFundModal(fund)">
+                              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                          </a>
+                      </h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Panel Body -->
+      <div class="panel-body">
+          <!-- Title -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b> Spending </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <b class="ng-binding"> $100,000.00 </b>
+                  </p>
+              </div>
+          </div>
+          <!-- Progress Bar -->
+          <div class="progress progress-bar-padding">
+              <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 72%;">
+                  <span class="sr-only ng-binding"> 72% Complete </span>
+              </div>
+              <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 28%;">
+                  <span class="sr-only ng-binding"> 28% Complete </span>
+              </div>
+          </div>
+          <!-- Amounts -->
+          <div class="row">
+              <!-- Left Side -->
+              <div class="col-xs-6">
+                  <b class="ng-binding"> $71,678.54 Spent </b>
+              </div>
+              <!-- Right Side -->
+              <div class="col-xs-6">
+                  <p class="text-right">
+                      <!-- ngIf: fund.amount > fund.totalExpenditure --><span ng-if="fund.amount > fund.totalExpenditure" class="ng-scope">
+                          <b class="ng-binding"> $28,321.46 Left </b>
+                      </span><!-- end ngIf: fund.amount > fund.totalExpenditure -->
+                      <!-- ngIf: fund.amount < fund.totalExpenditure -->
+                  </p>
+              </div>
+          </div>
+          <!-- Loan Draws -->
+          <div class="margin-around ng-hide" ng-show="fund.loan">
+              <!-- Title -->
+              <div class="row">
+                  <div class="col-xs-6">
+                      <b> Loan Draws </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <b class="ng-binding"> $100,000.00 </b>
+                      </p>
+                  </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="progress progress-bar-padding">
+                  <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 0%;">
+                      <span class="sr-only ng-binding"> 0% Complete </span>
+                  </div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 100%;">
+                      <span class="sr-only ng-binding"> 100% Complete </span>
+                  </div>
+              </div>
+              <!-- Amounts -->
+              <div class="row">
+                  <!-- Left Side -->
+                  <div class="col-xs-6">
+                      <b class="ng-binding"> $0.00 Received </b>
+                  </div>
+                  <!-- Right Side -->
+                  <div class="col-xs-6">
+                      <p class="text-right">
+                          <!-- ngIf: fund.amount > fund.totalDraw --><span ng-if="fund.amount > fund.totalDraw" class="ng-scope">
+                              <b class="ng-binding"> $100,000.00 Left </b>
+                          </span><!-- end ngIf: fund.amount > fund.totalDraw -->
+                          <!-- ngIf: fund.amount < fund.totalDraw -->
+                      </p>
+                  </div>
+              </div>
+              <!-- Line Break -->
+              <br>
+              <!-- Button - Add Draw -->
+              <button type="button" class="btn btn-success" title="Add Draw" ng-click="clickedFund(fund) &amp;&amp; showAddDrawModal()">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  <b> Add Draw </b>
+              </button>
+              <!-- Button - Delete Draws -->
+              <button type="button" class="btn btn-danger ng-pristine ng-untouched ng-valid disabled" title="Delete Selected" ng-model="fund.selected" ng-class="{ 'disabled': !fund.selected }" ng-click="clickedFund(fund) &amp;&amp; showDeleteDrawsModal()">
+                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                  <b> Delete </b>
+              </button>
+              <!-- Line Breaks -->
+              <br>
+              <br>
+              <!-- Table -->
+              <table st-table="fund.draws" class="table table-condensed table-bordered table-striped table-hover table-responsive">
+                  <!-- Table Header -->
+                  <thead>
+                      <tr>
+                          <th> <input type="checkbox" class="checkbox ng-pristine ng-untouched ng-valid" ng-model="fund.checkboxAll" ng-click="clickedFund(fund) &amp;&amp; clickedAllCheckbox()"> </th>
+                          <th class="text-center"> Draw </th>
+                          <th class="text-center"> Date </th>
+                          <th class="text-center"> Amount </th>
+                          <th class="text-center" style="width: 8%"></th>
+                      </tr>
+                  </thead>
+                  <!-- Table Body -->
+                  <tbody>
+                      <!-- ngRepeat: draw in fund.draws -->
+                  </tbody>
+                  <!-- Totals -->
+                  <!-- ngIf: fund.draws.length != 0 -->
+                  <!-- Empty -->
+                  <!-- ngIf: fund.draws.length == 0 --><tbody ng-if="fund.draws.length == 0" class="ng-scope">
+                      <tr>
+                          <td></td>
+                          <td colspan="4"> You have not made any draws yet. </td>
+                      </tr>
+                  </tbody><!-- end ngIf: fund.draws.length == 0 -->
+              </table>
+          </div>
+      </div>
+  </div>
 </ion-content>
