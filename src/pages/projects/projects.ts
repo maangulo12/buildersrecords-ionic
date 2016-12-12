@@ -22,9 +22,7 @@ export class ProjectsPage {
     public navCtrl: NavController,
     public modalCtrl: ModalController,
     public actionSheetCtrl: ActionSheetController
-  ) {
-
-  }
+  ) {}
 
   goToTabs() {
     this.navCtrl.push(TabsPage);

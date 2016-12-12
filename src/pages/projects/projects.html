@@ -19,7 +19,7 @@
     <!-- Card Header -->
     <ion-card-header color>
       <span class="glyphicon glyphicon-home padding-glyphicon" aria-hidden="true"></span>
-      <a class="text-success"> <b> {{ project.name }} </b> </a>
+      <a class="text-success" (click)="goToTabs()"> <b> {{ project.name }} </b> </a>
     </ion-card-header>
     <!-- Card Content -->
     <ion-card-content> {{ project.address }} </ion-card-content>    
@@ -33,6 +33,4 @@
       </span>
     </ion-item>
   </ion-card>
-  <!--Navigation -->
-  <ion-nav [root]="rootPage"></ion-nav>
 </ion-content>
