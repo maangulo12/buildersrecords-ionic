@@ -1,3 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- Title -->
+    <ion-title> BuildersRecords </ion-title>
+    <!-- Back Button -->
+    <ion-buttons start>
+      <button ion-button class="btn btn-default" (click)="goToProjects()">
+        <span color="light"> Back </span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-tabs>
   <ion-tab [root]="tab1Root" tabTitle="Overview" tabIcon="home"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="Job Cost" tabIcon="information-circle"></ion-tab>

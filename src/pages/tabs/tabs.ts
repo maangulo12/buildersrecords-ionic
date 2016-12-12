@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { ProjectsPage } from '../projects/projects';
 import { OverviewPage } from '../overview/overview';
 import { JobCostPage } from '../job-cost/job-cost';
 import { SubcontractorsPage } from '../subcontractors/subcontractors';
@@ -21,4 +22,7 @@ export class TabsPage {
 
   constructor(public navCtrl: NavController) {}
 
+  goToProjects() {
+    this.navCtrl.push(ProjectsPage);
+  }
 }
