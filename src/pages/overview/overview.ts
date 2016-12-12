@@ -10,8 +10,5 @@ import { ProjectsPage } from '../projects/projects';
 export class OverviewPage {
 
   constructor(public navCtrl: NavController) {}
-
-  goToProjects() {
-    this.navCtrl.push(ProjectsPage);
-  }
+  
 }
